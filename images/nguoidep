@@ -1,9 +1,10 @@
 <html>
  <head>
    <meta charset="UTF-8">
- <head>
+ </head>
  <body>
-  <img.src="images/vn.com/images/nguoidep" alt="hình đại diện"
+    <h1 > GIỚI THIỆU </h1>
+       <img.src="images/vn.com/images/nguoidep" alt="hình đại diện"
 🌟 Chào Mọi Người! Hãy Cùng Làm Quen Nhé!
 Thông tin cơ bản
 Xin chào, mình là Võ Ngọc Nga.
@@ -22,5 +23,6 @@ Mục tiêu trước mắt: Hoàn thành tốt chương trình học lớp 12, �
 
 💬 Lời kết
 Mình rất mong được làm quen và học hỏi từ mọi người. Hãy cùng nhau chia sẻ những điều thú vị và tạo nên một quãng thời gian thật ý nghĩa tại Ngô Quyền nhé!
-<html>
+ </body>
+</html>
 
