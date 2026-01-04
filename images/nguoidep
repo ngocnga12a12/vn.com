@@ -1,28 +1,53 @@
-<html>
- <head>
-   <meta charset="UTF-8">
- </head>
- <body>
-    <h1 > GIỚI THIỆU </h1>
-       <img.src="images/vn.com/images/nguoidep" alt="hình đại diện"
-🌟 Chào Mọi Người! Hãy Cùng Làm Quen Nhé!
-Thông tin cơ bản
-Xin chào, mình là Võ Ngọc Nga.
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu bản thân - Baby Chip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6f91;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            border-radius: 50%;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
 
-Hiện tại, mình đang là học sinh lớp 12A12 tại ngôi trường thân yêu Ngô Quyền. Năm học này là một cột mốc quan trọng, và mình đang dồn hết tâm huyết để chuẩn bị cho kỳ thi tốt nghiệp sắp tới.
+<div class="container">
+    <h1>Giới thiệu bản thân</h1>
 
-💖 Sở thích và Tính cách
-Về tính cách: Mình là một người khá năng động, hòa đồng và luôn sẵn sàng học hỏi những điều mới mẻ. Mình tin rằng nụ cười và thái độ tích cực có thể giải quyết được rất nhiều vấn đề.
+    <img src="images/avatar.jpg" alt="Ảnh đại diện">
 
-Sở thích: Mình rất thích đọc sách, đặc biệt là sách phát triển bản thân và các tiểu thuyết trinh thám. Ngoài ra, mình còn có niềm đam mê với nhiếp ảnh (chụp ảnh phong cảnh và chân dung bạn bè), giúp mình ghi lại những khoảnh khắc đẹp trong cuộc sống.
+    <p><b>Họ và tên:</b> Baby Chip</p>
+    <p><b>Nickname:</b> Chip</p>
+    <p><b>Sở thích:</b> Nghe nhạc, lướt mạng xã hội, xem video giải trí và tìm hiểu những điều mới.</p>
+    <p><b>Sở trường:</b> Kiên nhẫn, sáng tạo và có khả năng tự học.</p>
+    <p><b>Yêu thích:</b> Màu pastel, những thứ dễ thương và không khí yên tĩnh.</p>
+    <p><b>Không thích:</b> Áp lực quá nhiều và thức khuya.</p>
+    <p><b>Dự định tương lai:</b> Hoàn thành tốt việc học và phát triển bản thân mỗi ngày.</p>
+</div>
 
-🎯 Mục tiêu và Ước mơ
-Mục tiêu trước mắt: Hoàn thành tốt chương trình học lớp 12, đạt kết quả cao trong kỳ thi quan trọng sắp tới, và đỗ vào ngành học mình yêu thích tại trường Đại học.
-
-Ước mơ: Mình hy vọng sau này có thể trở thành [Bạn có thể thêm ngành nghề/lĩnh vực mơ ước của mình vào đây, ví dụ: một chuyên gia Marketing sáng tạo], để có thể vừa làm việc mình thích, vừa mang lại giá trị tích cực cho cộng đồng.
-
-💬 Lời kết
-Mình rất mong được làm quen và học hỏi từ mọi người. Hãy cùng nhau chia sẻ những điều thú vị và tạo nên một quãng thời gian thật ý nghĩa tại Ngô Quyền nhé!
- </body>
+</body>
 </html>
-
