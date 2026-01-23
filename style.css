@@ -1,13 +1,100 @@
-h1 {
-  color: red;
-}
-.f1 {
-   color: tomato;
-  margin-top: 18pt;
-  margin-bottom: 12pt;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Arial;
-  
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khảo sát chọn nghề nghiệp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border: 3px solid #ffb6c1;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff69b4;
+        }
+
+        label {
+            color: #ff69b4;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ffb6c1;
+            outline: none;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #ff69b4;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff1493;
+        }
+
+        .flower {
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <div class="flower">🌸🌼🌷</div>
+        <h2>Khảo sát nghề nghiệp</h2>
+
+        <form>
+            <label>Họ và tên:</label>
+            <input type="text" placeholder="Nhập họ tên">
+
+            <label>Chọn nghề nghiệp yêu thích:</label>
+            <select>
+                <option>Bác sĩ</option>
+                <option>Kỹ sư</option>
+                <option>Giáo viên</option>
+                <option>Lập trình viên</option>
+                <option>Nhà thiết kế</option>
+                <option>Khác</option>
+            </select>
+
+            <label>Lý do bạn chọn nghề này:</label>
+            <textarea rows="4" placeholder="Viết lý do của bạn..."></textarea>
+
+            <button type="submit">Gửi khảo sát 💐</button>
+        </form>
+    </div>
+
+</body>
+</html>
 
 
