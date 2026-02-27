@@ -2,112 +2,119 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Website của tôi</title>
+<title>Website Tin 12</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: white;
-    text-align: center;
+body{
+    margin:0;
+    font-family:Arial;
 }
 
-.menu {
-    background: rgba(0,0,0,0.5);
-    padding: 15px;
+/* HEADER */
+header{
+    background:#0b5fa5;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:24px;
+    font-weight:bold;
 }
 
-.menu button {
-    margin: 5px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+/* MENU */
+nav{
+    background:#1c3f5e;
+    padding:10px;
+    text-align:center;
 }
 
-.noidung {
-    display: none;
-    padding: 20px;
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    font-weight:bold;
+    margin:15px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+nav button:hover{
+    color:yellow;
+}
+
+/* CONTENT */
+.content{
+    padding:30px;
+    min-height:300px;
+}
+
+/* Ẩn nội dung */
+.section{
+    display:none;
+}
+
+/* FOOTER */
+footer{
+    background:#1c3f5e;
+    color:white;
+    text-align:center;
+    padding:10px;
 }
 </style>
 
 <script>
-function hien(id) {
-    var tatca = document.getElementsByClassName("noidung");
-    for (var i = 0; i < tatca.length; i++) {
-        tatca[i].style.display = "none";
+function hien(id){
+    var tatca = document.getElementsByClassName("section");
+    for(var i=0;i<tatca.length;i++){
+        tatca[i].style.display="none";
     }
-
-    document.getElementById(id).style.display = "block";
+    document.getElementById(id).style.display="block";
 }
 </script>
 
 </head>
+
 <body>
 
-<h1>TRANG WEB CỦA TÔI</h1>
+<header>
+TRƯỜNG THPT NGÔ QUYỀN TPHCM
+<br>
+<span style="font-size:18px;">Chuyên trang Tin học 12</span>
+</header>
 
-<div class="menu">
+<nav>
 <button onclick="hien('gioithieu')">Giới thiệu</button>
 <button onclick="hien('tinhoc')">Tin học</button>
 <button onclick="hien('thoikhoabieu')">Thời khóa biểu</button>
 <button onclick="hien('style')">Style</button>
-</div>
+</nav>
 
-<!-- GIỚI THIỆU -->
-<div id="gioithieu" class="noidung">
+<div class="content">
+
+<div id="gioithieu" class="section">
 <h2>GIỚI THIỆU</h2>
-<p><html>
-  <head>
-    <meta charset="UTF-8">
-  </head>
-   <body>
-     <img src="images/image1.jpg" alt="hình đại diện" width="120" height="180">
-     <h1>
-       Giới thiệu bản thân
-     </h1>
-      <p>
-      Xin chào! Tôi là BabyChip , đây là một trang web giới thiệu về bản thân tôi.
-      </p>
-      <b>
-       Sở thích và sở trường:
-      </b>
-       <i>
-         Sở thích của tôi là thưởng thức thật nhiều đồ ăn ngon . Điều đó khiến tôi cảm giác mình được chữa lành, thêm yêu đời và sống tốt hơn.
-       </i>
-       <p>
-        <b>
-          Ước mơ của tôi:
-        </b>
-        <i>
-          Ước mơ của tôi là vạn sự sẽ như ý, cuộc sống sẽ hạnh phúc và có thật nhiều niềm vui.
-        </i>
-      </p>
-       <p>
-         Cảm ơn bạn đã ghé thăm!
-       </p>
-   </body>    
-</html></p>
+<p>Dán nội dung giới thiệu của bạn vào đây.</p>
 </div>
 
-<!-- TIN HỌC -->
-<div id="tinhoc" class="noidung">
+<div id="tinhoc" class="section">
 <h2>TIN HỌC</h2>
-<p>👉 DÁN nội dung bạn đã code trong file tinhoc12.html vào đây</p>
+<p>Dán nội dung Tin học bạn đã làm vào đây.</p>
 </div>
 
-<!-- THỜI KHÓA BIỂU -->
-<div id="thoikhoabieu" class="noidung">
+<div id="thoikhoabieu" class="section">
 <h2>THỜI KHÓA BIỂU</h2>
-<p>👉 DÁN nội dung bạn đã code trong file thoikhoabieu.html vào đây</p>
+<p>Dán thời khóa biểu bạn đã code vào đây.</p>
 </div>
 
-<!-- STYLE -->
-<div id="style" class="noidung">
+<div id="style" class="section">
 <h2>STYLE</h2>
-<p>👉 DÁN nội dung bạn đã code trong file style.html vào đây</p>
+<p>Dán nội dung style của bạn vào đây.</p>
 </div>
+
+</div>
+
+<footer>
+© 2026 Trường THPT Ngô Quyền TPHCM
+</footer>
 
 </body>
-                      </html>
+    </html>
