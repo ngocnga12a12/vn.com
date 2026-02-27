@@ -2,101 +2,82 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Giới thiệu bản thân</title>
+<title>Website của tôi</title>
 
 <style>
-body{
-    margin:0;
+body {
+    margin: 0;
     font-family: Arial;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
 }
 
-/* HEADER */
-header{
-    background: linear-gradient(to right,#0b5fa5,#1e88e5);
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:24px;
-    font-weight:bold;
+.menu {
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
 }
 
-/* MENU */
-nav{
-    background:#1c3f5e;
-    padding:10px;
-    text-align:center;
+.menu button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:yellow;
-}
-
-/* CONTENT */
-.content{
-    padding:30px;
-}
-
-.content img{
-    float:left;
-    margin-right:20px;
-    border-radius:10px;
-}
-
-/* FOOTER */
-footer{
-    background:#1c3f5e;
-    color:white;
-    text-align:center;
-    padding:10px;
-    clear:both;
+.noidung {
+    display: none;
+    padding: 20px;
 }
 </style>
-</head>
 
+<script>
+function hien(id) {
+    var tatca = document.getElementsByClassName("noidung");
+    for (var i = 0; i < tatca.length; i++) {
+        tatca[i].style.display = "none";
+    }
+
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
+</head>
 <body>
 
-<header>
-TRƯỜNG THPT NGÔ QUYỀN TPHCM  
-<br>
-<span style="font-size:18px;">Chuyên trang Tin học 12</span>
-</header>
+<h1>TRANG WEB CỦA TÔI</h1>
 
-<nav>
-<a href="#">Giới thiệu</a>
-<a href="#">Thời khóa biểu</a>
-<a href="#">Chương trình Tin 12</a>
-<a href="#">Data Analyst</a>
-</nav>
-
-<div class="content">
-<h2 style="color:red;text-align:center;">GIỚI THIỆU BẢN THÂN</h2>
-
-<img src="avatar.png" width="150">
-
-<p><b>Nickname:</b> Yor</p>
-<p><b>Tuổi:</b> 17</p>
-
-<h3 style="color:#b22222;">Tính cách</h3>
-<p>Nhẹ nhàng, vui vẻ.</p>
-
-<h3 style="color:#b22222;">Sở thích</h3>
-<p>Nghe nhạc, đọc truyện, chụp hình.</p>
-
-<h3 style="color:#b22222;">Sở trường</h3>
-<p>Thiết kế cơ bản, sáng tạo nội dung.</p>
-
+<div class="menu">
+<button onclick="hien('gioithieu')">Giới thiệu</button>
+<button onclick="hien('tinhoc')">Tin học</button>
+<button onclick="hien('thoikhoabieu')">Thời khóa biểu</button>
+<button onclick="hien('style')">Style</button>
 </div>
 
-<footer>
-© 2026 Trường THPT Ngô Quyền TPHCM
-</footer>
+<!-- GIỚI THIỆU -->
+<div id="gioithieu" class="noidung">
+<h2>GIỚI THIỆU</h2>
+<p>👉 DÁN nội dung bạn đã code trong file gioithieu.html vào đây</p>
+</div>
+
+<!-- TIN HỌC -->
+<div id="tinhoc" class="noidung">
+<h2>TIN HỌC</h2>
+<p>👉 DÁN nội dung bạn đã code trong file tinhoc12.html vào đây</p>
+</div>
+
+<!-- THỜI KHÓA BIỂU -->
+<div id="thoikhoabieu" class="noidung">
+<h2>THỜI KHÓA BIỂU</h2>
+<p>👉 DÁN nội dung bạn đã code trong file thoikhoabieu.html vào đây</p>
+</div>
+
+<!-- STYLE -->
+<div id="style" class="noidung">
+<h2>STYLE</h2>
+<p>👉 DÁN nội dung bạn đã code trong file style.html vào đây</p>
+</div>
 
 </body>
-  </html>
+                      </html>
