@@ -5,397 +5,173 @@
 <title>Website Tin 12</title>
 
 <style>
+
 body{
     margin:0;
     font-family:Arial;
 }
 
-/* HEADER */
-header{
-    background:#0b5fa5;
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:24px;
-    font-weight:bold;
+/* BANNER */
+header img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
 }
 
 /* MENU */
 nav{
-    background:#1c3f5e;
-    padding:10px;
-    text-align:center;
+    background:#1c3f94;
 }
 
-nav button{
-    background:none;
-    border:none;
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+}
+
+nav ul li{
+    padding:15px 25px;
     color:white;
-    font-weight:bold;
-    margin:15px;
     cursor:pointer;
-    font-size:16px;
 }
 
-nav button:hover{
-    color:yellow;
+nav ul li:hover{
+    background:#0b5fa5;
 }
 
-/* CONTENT */
-.content{
-    padding:30px;
-    min-height:300px;
-}
-
-/* Ẩn nội dung */
-.section{
+/* NỘI DUNG */
+section{
+    padding:25px;
     display:none;
 }
 
-/* FOOTER */
 footer{
-    background:#1c3f5e;
+    background:#0b5fa5;
     color:white;
     text-align:center;
     padding:10px;
 }
+
 </style>
 
 <script>
+
 function hien(id){
-    var tatca = document.getElementsByClassName("section");
-    for(var i=0;i<tatca.length;i++){
-        tatca[i].style.display="none";
+    var a = document.getElementsByTagName("section");
+    for(var i=0;i<a.length;i++){
+        a[i].style.display="none";
     }
     document.getElementById(id).style.display="block";
 }
+
 </script>
 
 </head>
 
-<body>
+<body onload="hien('gioithieu')">
 
 <header>
-TRƯỜNG THPT NGÔ QUYỀN TPHCM
-<br>
-<span style="font-size:18px;">Chuyên trang Tin học 12</span>
+<img src="https://i.imgur.com/7b1YqKQ.png">
 </header>
 
 <nav>
-<button onclick="hien('gioithieu')">Giới thiệu</button>
-<button onclick="hien('tinhoc')">Tin học</button>
-<button onclick="hien('thoikhoabieu')">Thời khóa biểu</button>
-<button onclick="hien('style')">Style</button>
+<ul>
+<li onclick="hien('gioithieu')">Giới thiệu</li>
+<li onclick="hien('tinhoc')">Tin học</li>
+<li onclick="hien('thoikhoabieu')">Thời khóa biểu</li>
+<li onclick="hien('style')">Style</li>
+</ul>
 </nav>
 
-<div class="content">
+<section id="gioithieu">
 
-<div id="gioithieu" class="section">
-<h2></h2>
-<p>
-    <html>
-  <head>
-    <meta charset="UTF-8">
-  </head>
-   <body>
-     <img src="images/image1.jpg" alt="hình đại diện" width="120" height="180">
-     <h1>
-       Giới thiệu bản thân
-     </h1>
-      <p>
-      Xin chào! Tôi là BabyChip , đây là một trang web giới thiệu về bản thân tôi.
-      </p>
-      <b>
-       Sở thích và sở trường:
-      </b>
-       <i>
-         Sở thích của tôi là thưởng thức thật nhiều đồ ăn ngon . Điều đó khiến tôi cảm giác mình được chữa lành, thêm yêu đời và sống tốt hơn.
-       </i>
-       <p>
-        <b>
-          Ước mơ của tôi:
-        </b>
-        <i>
-          Ước mơ của tôi là vạn sự sẽ như ý, cuộc sống sẽ hạnh phúc và có thật nhiều niềm vui.
-        </i>
-      </p>
-       <p>
-         Cảm ơn bạn đã ghé thăm!
-       </p>
-   </body>    
-</html>
-</p>
-</div>
+<h1>CHƯƠNG TRÌNH TIN HỌC 12</h1>
 
-<div id="tinhoc" class="section">
-<h2></h2>
-<p>
-  <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Chương trình Tin học 12</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-        }
-        h1 {
-            text-align: center;
-            color: #003366;
-        }
-        h2 {
-            color: red;
-            margin-top: 25px;
-        }
-        ul {
-            margin-left: 40px;
-        }
-    </style>
-</head>
-<body>
+<h2>A. GIỚI THIỆU TRÍ TUỆ NHÂN TẠO, HỌC MÁY VÀ KHOA HỌC DỮ LIỆU</h2>
 
-    <h1>CHƯƠNG TRÌNH TIN HỌC 12</h1>
+<ul>
+<li>Giới thiệu về trí tuệ nhân tạo</li>
+<li>Sử dụng AI trong học tập và đời sống</li>
+<li>Khái niệm học máy (Machine Learning)</li>
+<li>Ứng dụng khoa học dữ liệu</li>
+</ul>
 
-    <h2>A. GIỚI THIỆU TRÍ TUỆ NHÂN TẠO, HỌC MÁY VÀ KHOA HỌC DỮ LIỆU</h2>
-    <ul>
-        <li>Giới thiệu về trí tuệ nhân tạo</li>
-        <li>Sử dụng AI trong học tập và đời sống</li>
-        <li>Giới thiệu về Học máy và Khoa học dữ liệu</li>
-        <li>Thực hành phân tích dữ liệu</li>
-    </ul>
+</section>
 
-    <h2>B. MẠNG MÁY TÍNH VÀ INTERNET</h2>
-    <ul>
-        <li>Cơ sở về mạng máy tính</li>
-        <li>Các giao thức mạng</li>
-        <li>Thực hành thiết lập kết nối và sử dụng mạng</li>
-        <li>Đường truyền hữu tuyến và vô tuyến</li>
-        <li>Thiết bị mạng</li>
-        <li>Thiết kế mạng LAN</li>
-    </ul>
 
-    <h2>D. ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA TRONG MÔI TRƯỜNG SỐ</h2>
-    <ul>
-        <li>Giao tiếp và tính nhân văn trong ứng xử trên không gian mạng</li>
-    </ul>
+<section id="tinhoc">
 
-    <h2>F. TẠO TRANG WEB</h2>
-    <ul>
-        <li>Làm quen với ngôn ngữ đánh dấu siêu văn bản</li>
-        <li>Định dạng văn bản và tạo siêu liên kết</li>
-        <li>Trình bày nội dung theo dạng danh sách, bảng biểu</li>
-        <li>Chèn hình ảnh, âm thanh, video và sử dụng khung</li>
-        <li>Tạo biểu mẫu</li>
-        <li>Định dạng với CSS</li>
-        <li>Bộ chọn lớp, bộ chọn định danh</li>
-        <li>Mô hình hộp, bố cục trang web</li>
-        <li>Dự án nhỏ: Tạo trang web</li>
-    </ul>
+<h2>NỘI DUNG TIN HỌC 12</h2>
 
-    <h2>G. HƯỚNG NGHIỆP VỚI TIN HỌC</h2>
-    <ul>
-        <li>Một số nghề ứng dụng CNTT và ngành thuộc lĩnh vực tin học</li>
-        <li>Dự án: Tìm hiểu thông tin tuyển sinh và hướng nghiệp</li>
-    </ul>
+<ul>
+<li>Thiết kế website cơ bản</li>
+<li>HTML và CSS</li>
+<li>JavaScript cơ bản</li>
+<li>Ứng dụng công nghệ thông tin trong đời sống</li>
+</ul>
 
-</body>
-</html>
-</html>
-</p>
-</div>
+</section>
 
-<div id="thoikhoabieu" class="section">
-<h2></h2>
-<p>
-    <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Thời khóa biểu</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: auto;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        .session {
-            background-color: #e0e0e0;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
 
-<h2 style="text-align:center;">THỜI KHÓA BIỂU</h2>
+<section id="thoikhoabieu">
 
-<table>
-    <tr>
-        <th>Tiết</th>
-        <th>Thứ 2</th>
-        <th>Thứ 3</th>
-        <th>Thứ 4</th>
-        <th>Thứ 5</th>
-        <th>Thứ 6</th>
-    </tr>
+<h2>THỜI KHÓA BIỂU</h2>
 
-    <tr class="session">
-        <td colspan="6">BUỔI SÁNG</td>
-    </tr>
-    <tr>
-        <td>Tiết 1</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Hóa</td>
-    </tr>
-    <tr>
-        <td>Tiết 2</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Sinh</td>
-    </tr>
-    <tr>
-        <td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td>
-    </tr>
-    <tr>
-        <td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td>
-    </tr>
+<table border="1" cellpadding="10">
 
-    <tr class="session">
-        <td colspan="6">BUỔI CHIỀU</td>
-    </tr>
-    <tr>
-        <td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td>
-    </tr>
-    <tr>
-        <td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td>
-    </tr>
-    <tr>
-        <td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td>
-    </tr>
+<tr>
+<th>Thứ</th>
+<th>Môn học</th>
+</tr>
+
+<tr>
+<td>Thứ 2</td>
+<td>Tin học</td>
+</tr>
+
+<tr>
+<td>Thứ 3</td>
+<td>Toán</td>
+</tr>
+
+<tr>
+<td>Thứ 4</td>
+<td>Văn</td>
+</tr>
+
+<tr>
+<td>Thứ 5</td>
+<td>Lý</td>
+</tr>
+
+<tr>
+<td>Thứ 6</td>
+<td>Hóa</td>
+</tr>
+
 </table>
 
-</body>
-</html>
+</section>
+
+
+<section id="style">
+
+<h2>STYLE TRANG WEB</h2>
+
+<p>
+Trang web này được thiết kế bằng HTML, CSS và JavaScript cơ bản.
+Mục đích giúp học sinh làm quen với việc thiết kế website đơn giản.
 </p>
-</div>
 
-<div id="style" class="section">
-<h2></h2>
-<p><!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Tự giới thiệu và chọn nghề nghiệp</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffe6f0, #e6fff7);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+</section>
 
-        .container {
-            width: 800px;
-            display: flex;
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            width: 100%;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border: 3px solid #ffb6c1;
-        }
-
-        h2 {
-            text-align: center;
-            color: #ff69b4;
-        }
-
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .career {
-            margin-top: 15px;
-            padding: 15px;
-            background: #fff0f5;
-            border-radius: 12px;
-            border: 2px dashed #ffb6c1;
-        }
-
-        .career h3 {
-            color: #ff69b4;
-            margin-bottom: 5px;
-        }
-
-        .flower {
-            text-align: center;
-            font-size: 26px;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-
-    <!-- Người 1: BabyChip -->
-    <div class="card">
-        <div class="flower">🌸🌼🌷</div>
-        <h2>BabyChip</h2>
-
-        <p>
-            Xin chào mọi người, mình tên là <b>BabyChip</b>. Mình là một người vui vẻ, thích học hỏi những điều mới 
-            và luôn cố gắng trong học tập.
-        </p>
-
-        <div class="career">
-            <h3>🌺 Nghề nghiệp mơ ước: Lập trình viên</h3>
-            <p>
-                Mình chọn nghề lập trình viên vì mình rất thích máy tính và công nghệ. 
-                Mỗi khi viết được một đoạn chương trình chạy đúng, mình cảm thấy rất vui và tự hào. 
-                Nghề này giúp mình sáng tạo và làm việc trong môi trường hiện đại.
-            </p>
-        </div>
-    </div>
-
-    <!-- Người 2: Toni -->
-    <div class="card">
-        <div class="flower">🌷🌻🌸</div>
-        <h2>Toni</h2>
-
-        <p>
-            Xin chào, mình tên là <b>Toni</b>. Mình là một người hiền hòa, yêu thích giúp đỡ người khác 
-            và luôn quan tâm đến mọi người xung quanh.
-        </p>
-
-        <div class="career">
-            <h3>🌼 Nghề nghiệp mơ ước: Bác sĩ</h3>
-            <p>
-                Mình chọn nghề bác sĩ vì mình mong muốn có thể chữa bệnh và mang lại sức khỏe cho nhiều người. 
-                Khi nhìn thấy bệnh nhân khỏe lại, mình cảm thấy rất hạnh phúc và có thêm động lực học tập.
-            </p>
-        </div>
-    </div>
-
-</div>
-
-</body>
-</html></p>
-</div>
-
-</div>
 
 <footer>
-© 2026 Trường THPT Ngô Quyền TPHCM
+
+Website Tin học 12
+
 </footer>
 
 </body>
-    </html>
+    </html> 
