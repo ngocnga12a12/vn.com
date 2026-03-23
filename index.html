@@ -1,188 +1,230 @@
-<!DOCTYPE html >
-< html  lang =" vi " >
-< đầu >
-< meta  charset =" UTF-8 " >
-< title > Trang web Tin 12 </ title >
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Trang web Tin 12</title>
 
-<style>​​
-thân hình {
-    lề :  0 ;
-    font-family : Arial;
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
 }
 
-/* TIÊU ĐỀ */
-tiêu đề {
-    nền :  # 0b5fa5 ;
-    căn chỉnh văn bản : ở giữa;
+/* HEADER */
+header {
+    background: #0b5fa5;
+    text-align: center;
+    color: white;
+    padding: 15px;
 }
 
 /* MENU */
-điều hướng {
-    hình nền :  # 1c3f5e ;
-    khoảng đệm :  10px ;
-    căn chỉnh văn bản : ở giữa;
+nav {
+    background: #1c3f5e;
+    padding: 10px;
+    text-align: center;
 }
 
- nút điều hướng {
-    Không có hình nền ;
-    viền : không có;
-    Màu sắc : trắng;
-    font-weight : bold;
-    lề :  15px ;​
-    con trỏ : con trỏ chuột;
-    cỡ chữ :  16px ;
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
- nút điều hướng : di chuột {
-    Màu sắc : vàng;
+nav button:hover {
+    color: yellow;
 }
 
-/* NỘI DUNG */
-. nội dung {
-    khoảng đệm :  30px ;
-    min -height :  400px ;
+/* CONTENT */
+.content {
+    padding: 30px;
 }
 
-. phần {
-    hiển thị : không có;
+.section {
+    display: none;
 }
 
-/* BÀN */
-bàn {
-    sụp đổ biên giới : sụp đổ;
-    chiều rộng :  80 % ;
-    lề : tự động;
+.active {
+    display: block;
 }
 
-th ,  td {
-    viền :  1 px màu đen đặc;
-    khoảng đệm :  8px ;
-    căn chỉnh văn bản : ở giữa;
+/* TABLE */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
 }
 
-. phiên họp {
-    nền :  # e0e0e0 ;
-    font-weight : bold;
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
 }
 
-/* THẺ */
-. container {
-    chiều rộng :  900 px ;
-    lề : tự động;
-    hiển thị : flex;
-    khoảng cách :  30px ;
+.session {
+    background: #e0e0e0;
+    font-weight: bold;
 }
 
-</ tr >
+/* CARD */
+.container {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+}
 
-< tr >
-< td > Tiết 3 </ td > < td > Lý </ td > < td > Hóa </ td > < td > Toán </ td > < td > Văn </ td > < td > Anh </ td >
-</ tr >
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 45%;
+}
+</style>
 
-< tr >
-< td > Tiết 4 </ td > < td > Anh </ td > < td > Sinh </ td > < td > Lý </ td > < td > Toán </ td > < td > Văn </ td >
-</ tr >
+<script>
+function showSection(id) {
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
 
-< tr  class =" session " >
-< td  colspan =" 6 " > BUỔI CHIỀU </ td >
-</ tr >
+</head>
 
-< tr >
-< td > Tiết kiệm 1 </ td > < td > Thể dục </ td > < td > Tin </ td > < td > Công nghệ </ td > < td > Tin </ td > < td > Thể dục </ td >
-</ tr >
+<body>
 
-< tr >
-< td > Tiết 2 </ td > < td > Tin </ td > < td > Thể giáo dục </ td > < td > GDCD </ td > < td > Công nghệ </ td > < td > Tin </ td >
-</ tr >
+<header>
+<h1>Trang web Tin 12</h1>
+</header>
 
-< tr >
-< td > Tiết 3 </ td > < td > GDCD </ td > < td > Tin </ td > < td > Thể giáo dục </ td > < td > GDCD </ td > < td > Công nghệ </ td >
-</ tr >
+<nav>
+<button onclick="showSection('tkb')">Thời khóa biểu</button>
+<button onclick="showSection('gioithieu')">Giới thiệu</button>
+<button onclick="showSection('gopy')">Góp ý</button>
+</nav>
 
-</ bảng >
+<div class="content">
 
-</ div >
+<!-- TKB -->
+<div id="tkb" class="section active">
+<table>
 
-<!-- STYLE -->
-< div  id ="" style " class ="" section " >
+<tr>
+<th>Tiết</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th>
+</tr>
 
-< div  class =" container " >
+<tr class="session">
+<td colspan="6">BUỔI SÁNG</td>
+</tr>
 
-< div  class =" card " >
-< div  class = " flower " > </div> 🌸🌼🌷 </div>
+<tr>
+<td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td>
+</tr>
 
-< h2 > BabyChip </ h2 >
+<tr>
+<td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td>
+</tr>
 
-<p>​​
-Xin chào mọi người, mình tên là < b > BabyChip </ b > . Mình là một người vui vẻ, thích học hỏi những điều mới và luôn cố gắng trong suốt quá trình học tập.
-</p>​​
+<tr class="session">
+<td colspan="6">BUỔI CHIỀU</td>
+</tr>
 
-< div  class =" career " >
-< h3 > 🌺 Nghề nghiệp mơ ước: Lập trình viên </ h3 >
-<p>​​
-Mình chọn lập trình viên nghề nghiệp vì mình rất thích máy tính và công nghệ. Mỗi khi viết được một đoạn chương trình, mình cảm thấy rất vui và tự hào. Nghề này giúp mình sáng tạo và làm việc trong môi trường hiện đại.
-</p>​​
-</ div >
+<tr>
+<td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td>
+</tr>
 
-</ div >
+<tr>
+<td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td>
+</tr>
 
-< div  class =" card " >
-< div  class = " flower " > </div> 🌷🌻🌸 </div>
+<tr>
+<td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td>
+</tr>
 
-<h2> Toni </h2>​​​​
+</table>
+</div>
 
-<p>​​
-Xin chào, mình tên là < b > Toni </ b > . Mình là một người hiền hoà, yêu thích giúp đỡ người khác và luôn quan tâm đến mọi người xung quanh.
-</p>​​
+<!-- GIỚI THIỆU -->
+<div id="gioithieu" class="section">
+<div class="container">
 
-< div  class =" career " >
-< h3 > 🌼 Nghề nghiệp mơ ước: Bác sĩ </ h3 >
-<p>​​
-Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp đỡ mọi người khỏe mạnh.
-</p>​​
-</ div >
+<div class="card">
+<div>🌸🌼🌷</div>
+<h2>BabyChip</h2>
+<p>
+Xin chào mọi người, mình tên là <b>BabyChip</b>. Mình là một người vui vẻ, thích học hỏi.
+</p>
+<h3>🌺 Nghề nghiệp mơ ước: Lập trình viên</h3>
+<p>
+Mình thích máy tính và công nghệ.
+</p>
+</div>
 
-</ div >
+<div class="card">
+<div>🌷🌻🌸</div>
+<h2>Toni</h2>
+<p>
+Xin chào, mình tên là <b>Toni</b>.
+</p>
+<h3>🌼 Nghề nghiệp mơ ước: Bác sĩ</h3>
+<p>
+Mình muốn giúp đỡ mọi người.
+</p>
+</div>
 
-</ div >
-
-</ div >
+</div>
+</div>
 
 <!-- GÓP Ý -->
-< div  id =" gopy " class =" phần " >
+<div id="gopy" class="section">
 
-< h3 > Đóng góp ý kiến ​​cho thư viện nhà trường </ h3 >
+<h3>Đóng góp ý kiến cho thư viện nhà trường</h3>
 
-< form  action =" # " >
-    <fieldset>​​
-        < legend > 1. Thông tin về người góp ý </ legend >
-        
-        < label > Họ và tên: </ label >
-        < input  type =" text " name =" txtTen " >
+<form>
+<fieldset>
+<legend>1. Thông tin</legend>
 
-        < nhãn > Địa chỉ email: </ nhãn >
-        < input  type =" text " name =" txtEmail " >
-    </fieldset>​​
+<label>Họ và tên:</label>
+<input type="text" name="txtTen"><br><br>
 
-    <fieldset>​​
-        < legend > 2. Đóng góp ý kiến ​​</ legend >
-        
-        < nhãn > Ý kiến ​​đóng góp: </ nhãn > < br >
-        < textarea  name =" txtComment " rows = " 6 " cols = " 40 " > </textarea>
-    </fieldset>​​
+<label>Địa chỉ email:</label>
+<input type="text" name="txtEmail">
+</fieldset>
 
-    <br>​​
-    < loại đầu vào  =" gửi " giá trị =" Gửi ý kiến ​​" >
-    < input  type =" reset " value =" Nhập lại " >
-</form>​​
+<fieldset>
+<legend>2. Ý kiến</legend>
 
-</ div >
+<label>Ý kiến:</label><br>
+<textarea name="txtComment" rows="6" cols="40"></textarea>
 
-</ div >
+<br><br>
 
-< chân trang >
+<input type="checkbox"> Truyện ngắn<br>
+<input type="checkbox"> Kĩ năng sống<br>
+<input type="checkbox"> Công nghệ thông tin<br>
+<input type="checkbox"> Truyện tranh<br>
+<input type="checkbox"> Lịch sử
+
+</fieldset>
+
+<br>
+
+<input type="submit" value="Góp ý">
+<input type="reset" value="Nhập lại">
+
+</form>
+
+</div>
+
+</div>
+
+<footer style="text-align:center;">
 © 2026 Trường THPT Ngô Quyền Tp.HCM
-</footer>​​
+</footer>
 
-</body>​​
-</ html >
+</body>
+    </html>
