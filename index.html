@@ -10,7 +10,7 @@ body {
     font-family: Arial;
 }
 
-/* HEADER */
+/* TIÊU ĐỀ */
 header {
     background: #0b5fa5;
     text-align: center;
@@ -39,9 +39,10 @@ nav button:hover {
     color: yellow;
 }
 
-/* CONTENT */
+/* NỘI DUNG */
 .content {
     padding: 30px;
+    min-height: 400px;
 }
 
 .section {
@@ -52,7 +53,7 @@ nav button:hover {
     display: block;
 }
 
-/* TABLE */
+/* BẢNG */
 table {
     border-collapse: collapse;
     width: 80%;
@@ -70,7 +71,7 @@ th, td {
     font-weight: bold;
 }
 
-/* CARD */
+/* THẺ */
 .container {
     width: 900px;
     margin: auto;
@@ -84,7 +85,7 @@ th, td {
     width: 45%;
 }
 
-/* MESSAGE */
+/* THÔNG BÁO */
 .success {
     background: #d4edda;
     padding: 10px;
@@ -122,9 +123,8 @@ function submitForm(event) {
 
 <div class="content">
 
-<!-- THỜI KHÓA BIỂU (CODE GỐC) -->
+<!-- THỜI KHÓA BIỂU (GIỮ NGUYÊN NỘI DUNG) -->
 <div id="tkb" class="section active">
-
 <table>
 <tr>
 <th>Tiết</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th>
@@ -167,45 +167,60 @@ function submitForm(event) {
 </tr>
 
 </table>
-
 </div>
 
-<!-- GIỚI THIỆU (CODE GỐC) -->
+<!-- GIỚI THIỆU (GIỮ NGUYÊN NỘI DUNG) -->
 <div id="gioithieu" class="section">
 
 <div class="container">
 
 <div class="card">
-<h2>🌸 BabyChip</h2>
+<div>🌸🌼🌷</div>
+<h2>BabyChip</h2>
+
 <p>
 Xin chào mọi người, mình tên là <b>BabyChip</b>. 
-Mình là người vui vẻ, thích học hỏi.
+Mình là một người vui vẻ, thích học hỏi những điều mới và luôn cố gắng trong suốt quá trình học tập.
 </p>
 
-<h3>Nghề nghiệp mơ ước: Lập trình viên</h3>
-<p>Mình thích công nghệ và viết chương trình.</p>
+<div class="career">
+<h3>🌺 Nghề nghiệp mơ ước: Lập trình viên</h3>
+<p>
+Mình chọn lập trình viên vì mình rất thích máy tính và công nghệ. 
+Mỗi khi viết được một đoạn chương trình, mình cảm thấy rất vui và tự hào.
+</p>
+</div>
+
 </div>
 
 <div class="card">
-<h2>🌼 Toni</h2>
+<div>🌷🌻🌸</div>
+<h2>Toni</h2>
+
 <p>
-Xin chào, mình tên là <b>Toni</b>.
-Mình thích giúp đỡ người khác.
+Xin chào, mình tên là <b>Toni</b>. 
+Mình là một người hiền hoà, yêu thích giúp đỡ người khác.
 </p>
 
-<h3>Nghề nghiệp mơ ước: Bác sĩ</h3>
-<p>Mình muốn chữa bệnh cho mọi người.</p>
+<div class="career">
+<h3>🌼 Nghề nghiệp mơ ước: Bác sĩ</h3>
+<p>
+Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp đỡ mọi người khỏe mạnh.
+</p>
 </div>
 
 </div>
 
 </div>
 
-<!-- GÓP Ý (NV1 + NV2 + NV3) -->
+</div>
+
+<!-- GÓP Ý (THÊM NV2 + NV3) -->
 <div id="gopy" class="section">
 
 <div id="message" class="success">
-<b>Cảm ơn bạn đã góp ý kiến!</b>
+<b>Cảm ơn bạn đã góp ý kiến!</b><br>
+Chúng tôi sẽ ghi nhận và cải thiện trong thời gian tới.
 </div>
 
 <h3>Đóng góp ý kiến cho thư viện nhà trường</h3>
@@ -213,26 +228,27 @@ Mình thích giúp đỡ người khác.
 <form onsubmit="submitForm(event)">
 
 <fieldset>
-<legend>1. Thông tin</legend>
+<legend>1. Thông tin về người góp ý</legend>
 
-Họ và tên:<br>
-<input type="text"><br><br>
+<label>Họ và tên:</label><br>
+<input type="text" name="txtTen"><br><br>
 
-Email:<br>
-<input type="text">
+<label>Địa chỉ email:</label><br>
+<input type="text" name="txtEmail">
 </fieldset>
 
 <fieldset>
-<legend>2. Ý kiến</legend>
+<legend>2. Đóng góp ý kiến</legend>
 
-<textarea rows="5" cols="40"></textarea>
+<label>Ý kiến đóng góp:</label><br>
+<textarea name="txtComment" rows="6" cols="40"></textarea>
 
 <br><br>
 
-<b>Chọn thể loại sách:</b><br>
+<b>Thể loại cần bổ sung thêm sách:</b><br>
 <input type="checkbox"> Truyện ngắn<br>
 <input type="checkbox"> Kĩ năng sống<br>
-<input type="checkbox"> CNTT<br>
+<input type="checkbox"> Công nghệ thông tin<br>
 <input type="checkbox"> Truyện tranh<br>
 <input type="checkbox"> Lịch sử
 </fieldset>
@@ -253,259 +269,4 @@ Email:<br>
 </footer>
 
 </body>
-    </html> <!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<title>Trang web Tin 12</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-}
-
-/* HEADER */
-header {
-    background: #0b5fa5;
-    text-align: center;
-    color: white;
-    padding: 15px;
-}
-
-/* MENU */
-nav {
-    background: #1c3f5e;
-    padding: 10px;
-    text-align: center;
-}
-
-nav button {
-    background: none;
-    border: none;
-    color: white;
-    font-weight: bold;
-    margin: 15px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-nav button:hover {
-    color: yellow;
-}
-
-/* CONTENT */
-.content {
-    padding: 30px;
-}
-
-.section {
-    display: none;
-}
-
-.active {
-    display: block;
-}
-
-/* TABLE */
-table {
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-}
-
-.session {
-    background: #e0e0e0;
-    font-weight: bold;
-}
-
-/* CARD */
-.container {
-    width: 900px;
-    margin: auto;
-    display: flex;
-    gap: 30px;
-}
-
-.card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    width: 45%;
-}
-
-/* MESSAGE */
-.success {
-    background: #d4edda;
-    padding: 10px;
-    margin-bottom: 15px;
-    display: none;
-}
-</style>
-
-<script>
-function showSection(id) {
-    let sections = document.querySelectorAll('.section');
-    sections.forEach(sec => sec.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-}
-
-function submitForm(event) {
-    event.preventDefault();
-    document.getElementById("message").style.display = "block";
-}
-</script>
-
-</head>
-
-<body>
-
-<header>
-<h1>Trang web Tin 12</h1>
-</header>
-
-<nav>
-<button onclick="showSection('tkb')">Thời khóa biểu</button>
-<button onclick="showSection('gioithieu')">Giới thiệu</button>
-<button onclick="showSection('gopy')">Góp ý</button>
-</nav>
-
-<div class="content">
-
-<!-- THỜI KHÓA BIỂU (CODE GỐC) -->
-<div id="tkb" class="section active">
-
-<table>
-<tr>
-<th>Tiết</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th>
-</tr>
-
-<tr class="session">
-<td colspan="6">BUỔI SÁNG</td>
-</tr>
-
-<tr>
-<td>Tiết 1</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Hóa</td>
-</tr>
-
-<tr>
-<td>Tiết 2</td><td>Văn</td><td>Toán</td><td>Sinh</td><td>Hóa</td><td>Lý</td>
-</tr>
-
-<tr>
-<td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td>
-</tr>
-
-<tr>
-<td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td>
-</tr>
-
-<tr class="session">
-<td colspan="6">BUỔI CHIỀU</td>
-</tr>
-
-<tr>
-<td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td>
-</tr>
-
-<tr>
-<td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td>
-</tr>
-
-<tr>
-<td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td>
-</tr>
-
-</table>
-
-</div>
-
-<!-- GIỚI THIỆU (CODE GỐC) -->
-<div id="gioithieu" class="section">
-
-<div class="container">
-
-<div class="card">
-<h2>🌸 BabyChip</h2>
-<p>
-Xin chào mọi người, mình tên là <b>BabyChip</b>. 
-Mình là người vui vẻ, thích học hỏi.
-</p>
-
-<h3>Nghề nghiệp mơ ước: Lập trình viên</h3>
-<p>Mình thích công nghệ và viết chương trình.</p>
-</div>
-
-<div class="card">
-<h2>🌼 Toni</h2>
-<p>
-Xin chào, mình tên là <b>Toni</b>.
-Mình thích giúp đỡ người khác.
-</p>
-
-<h3>Nghề nghiệp mơ ước: Bác sĩ</h3>
-<p>Mình muốn chữa bệnh cho mọi người.</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- GÓP Ý (NV1 + NV2 + NV3) -->
-<div id="gopy" class="section">
-
-<div id="message" class="success">
-<b>Cảm ơn bạn đã góp ý kiến!</b>
-</div>
-
-<h3>Đóng góp ý kiến cho thư viện nhà trường</h3>
-
-<form onsubmit="submitForm(event)">
-
-<fieldset>
-<legend>1. Thông tin</legend>
-
-Họ và tên:<br>
-<input type="text"><br><br>
-
-Email:<br>
-<input type="text">
-</fieldset>
-
-<fieldset>
-<legend>2. Ý kiến</legend>
-
-<textarea rows="5" cols="40"></textarea>
-
-<br><br>
-
-<b>Chọn thể loại sách:</b><br>
-<input type="checkbox"> Truyện ngắn<br>
-<input type="checkbox"> Kĩ năng sống<br>
-<input type="checkbox"> CNTT<br>
-<input type="checkbox"> Truyện tranh<br>
-<input type="checkbox"> Lịch sử
-</fieldset>
-
-<br>
-
-<input type="submit" value="Góp ý">
-<input type="reset" value="Nhập lại">
-
-</form>
-
-</div>
-
-</div>
-
-<footer style="text-align:center; padding:10px;">
-© 2026 Trường THPT Ngô Quyền Tp.HCM
-</footer>
-
-</body>
-</html>
+    </html>
