@@ -113,6 +113,16 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* ✅ NV3 */
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: none;
+    border-radius: 10px;
+}
 </style>
 
 <script>
@@ -122,6 +132,12 @@ function hien(id) {
         tatca[i].style.display = "none";
     }
     document.getElementById(id).style.display = "block";
+}
+
+/* ✅ NV3 */
+function guiYKien(event) {
+    event.preventDefault();
+    document.getElementById("thongbao").style.display = "block";
 }
 </script>
 
@@ -217,18 +233,11 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 
 <!-- THỜI KHÓA BIỂU -->
 <div id="thoikhoabieu" class="section">
-
 <h2 style="text-align:center;">THỜI KHÓA BIỂU</h2>
 
 <table>
-
 <tr>
-<th>Tiết</th>
-<th>Thứ 2</th>
-<th>Thứ 3</th>
-<th>Thứ 4</th>
-<th>Thứ 5</th>
-<th>Thứ 6</th>
+<th>Tiết</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th>
 </tr>
 
 <tr class="session">
@@ -266,54 +275,22 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 <tr>
 <td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td>
 </tr>
-
 </table>
-
 </div>
 
 <!-- STYLE -->
 <div id="style" class="section">
-
 <div class="container">
-
 <div class="card">
 <div class="flower">🌸🌼🌷</div>
-
 <h2>BabyChip</h2>
-
-<p>
-Xin chào mọi người, mình tên là <b>BabyChip</b>. Mình là một người vui vẻ, thích học hỏi những điều mới và luôn cố gắng trong quá trình học tập.
-</p>
-
+<p>Xin chào mọi người...</p>
 <div class="career">
 <h3>🌺 Nghề nghiệp mơ ước: Lập trình viên</h3>
-<p>
-Mình chọn nghề lập trình viên vì mình rất thích máy tính và công nghệ. Mỗi khi viết được một đoạn chương trình, mình cảm thấy rất vui và tự hào. Nghề này giúp mình sáng tạo và làm việc trong môi trường hiện đại.
-</p>
+<p>...</p>
 </div>
-
 </div>
-
-<div class="card">
-<div class="flower">🌷🌻🌸</div>
-
-<h2>Toni</h2>
-
-<p>
-Xin chào, mình tên là <b>Toni</b>. Mình là một người hiền hòa, yêu thích giúp đỡ người khác và luôn quan tâm đến mọi người xung quanh.
-</p>
-
-<div class="career">
-<h3>🌼 Nghề nghiệp mơ ước: Bác sĩ</h3>
-<p>
-Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi người khỏe mạnh.
-</p>
 </div>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- GÓP Ý -->
@@ -321,7 +298,11 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
 
 <h3>Đóng góp ý kiến cho thư viện của nhà trường</h3>
 
-<form action="#">
+<div id="thongbao" class="success">
+<b>Cảm ơn bạn đã góp ý kiến!</b>
+</div>
+
+<form action="#" onsubmit="guiYKien(event)">
     <fieldset>
         <legend>1. Thông tin về người góp ý</legend>
         
@@ -337,6 +318,16 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
         
         <label>Ý kiến đóng góp:</label><br>
         <textarea name="txtComment" rows="6" cols="40"></textarea>
+
+        <br><br>
+
+        <!-- NV2 -->
+        <b>Thể loại sách muốn bổ sung:</b><br>
+        <input type="checkbox"> Truyện ngắn<br>
+        <input type="checkbox"> Kĩ năng sống<br>
+        <input type="checkbox"> Công nghệ thông tin<br>
+        <input type="checkbox"> Truyện tranh<br>
+        <input type="checkbox"> Lịch sử
     </fieldset>
 
     <br>
