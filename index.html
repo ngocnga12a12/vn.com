@@ -14,6 +14,8 @@ body {
 header {
     background: #0b5fa5;
     text-align: center;
+    color: white;
+    padding: 15px;
 }
 
 /* MENU */
@@ -40,29 +42,14 @@ nav button:hover {
 /* CONTENT */
 .content {
     padding: 30px;
-    min-height: 400px;
 }
 
 .section {
     display: none;
 }
 
-/* TABLE */
-table {
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-}
-
-.session {
-    background: #e0e0e0;
-    font-weight: bold;
+.active {
+    display: block;
 }
 
 /* CARD */
@@ -74,239 +61,85 @@ th, td {
 }
 
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    width: 100%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    border: 3px solid #ffb6c1;
-}
-
-.career {
-    margin-top: 15px;
+    border: 1px solid #ccc;
     padding: 15px;
-    background: #fff0f5;
-    border-radius: 12px;
-    border: 2px dashed #ffb6c1;
-}
-
-.flower {
-    text-align: center;
-    font-size: 26px;
+    width: 45%;
 }
 
 /* FORM */
-form {
-    width: 60%;
-    margin: auto;
+fieldset {
+    margin-bottom: 15px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 8px;
-}
-
-/* FOOTER */
-footer {
-    background: #1c3f5e;
-    color: white;
-    text-align: center;
-    padding: 10px;
+/* MESSAGE */
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 20px;
+    display: none;
 }
 </style>
 
 <script>
-function hien(id) {
-    var tatca = document.getElementsByClassName("section");
-    for (var i = 0; i < tatca.length; i++) {
-        tatca[i].style.display = "none";
-    }
-    document.getElementById(id).style.display = "block";
+function showSection(id) {
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function submitForm(event) {
+    event.preventDefault();
+    document.getElementById("message").style.display = "block";
 }
 </script>
 
 </head>
 
-<body onload="hien('gioithieu')">
+<body>
 
 <header>
-<img src="images/IMG_20260309_142650.png" width="100%">
+<h1>Trang web Tin 12</h1>
 </header>
 
 <nav>
-<button onclick="hien('gioithieu')">Giới thiệu</button>
-<button onclick="hien('tinhoc')">Tin học</button>
-<button onclick="hien('thoikhoabieu')">Thời khóa biểu</button>
-<button onclick="hien('style')">Style</button>
-<button onclick="hien('gopy')">Góp ý</button>
+<button onclick="showSection('gioithieu')">Giới thiệu</button>
+<button onclick="showSection('gopy')">Góp ý</button>
 </nav>
 
 <div class="content">
 
-<!-- GIỚI THIỆU -->
-<div id="gioithieu" class="section">
-
-<img src="images/image1.jpg" width="120" height="180">
-
-<h1>Giới thiệu bản thân</h1>
-
-<p>Xin chào! Tôi là BabyChip, đây là một trang web giới thiệu về bản thân tôi.</p>
-
-<b>Sở thích và sở trường:</b>
-<p><i>
-Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm cho tôi cảm thấy mình được chữa lành, thêm yêu đời và sống tốt hơn.
-</i></p>
-
-<p>
-<b>Giấc mơ của tôi:</b>
-<i>
-Ước mơ của tôi là vạn sự như ý, cuộc sống hạnh phúc và có thật nhiều niềm vui.
-</i>
-</p>
-
-<p>Cảm ơn bạn đã ghé thăm!</p>
-
-</div>
-
-<!-- TIN HỌC -->
-<div id="tinhoc" class="section">
-
-<h1 style="text-align:center;color:#003366;">CHƯƠNG TRÌNH TIN HỌC 12</h1>
-
-<h2 style="color:red;">A. GIỚI THIỆU TRÍ TUỆ NHÂN TẠO, HỌC MÁY VÀ KHOA HỌC DỮ LIỆU</h2>
-<ul>
-<li>Giới thiệu về trí tuệ nhân tạo</li>
-<li>Ứng dụng AI trong học tập và đời sống</li>
-<li>Giới thiệu về học máy và khoa học dữ liệu</li>
-<li>Phân tích dữ liệu thực hành</li>
-</ul>
-
-<h2 style="color:red;">B. MẠNG MÁY TÍNH VÀ INTERNET</h2>
-<ul>
-<li>Cơ sở về mạng máy tính</li>
-<li>Các giao thức mạng</li>
-<li>Thiết lập kết nối và sử dụng mạng</li>
-<li>Đường truyền hữu tuyến và vô tuyến</li>
-<li>Thiết bị mạng</li>
-<li>Thiết kế mạng LAN</li>
-</ul>
-
-<h2 style="color:red;">D. ĐẠO ĐỨC VÀ PHÁP LUẬT TRONG MÔI TRƯỜNG SỐ</h2>
-<ul>
-<li>Ứng xử văn minh trên mạng</li>
-</ul>
-
-<h2 style="color:red;">F. TẠO TRANG WEB</h2>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>Danh sách, bảng</li>
-<li>Chèn hình ảnh, video</li>
-<li>Tạo biểu mẫu</li>
-<li>Bố cục trang</li>
-<li>Dự án web</li>
-</ul>
-
-<h2 style="color:red;">G. HƯỚNG NGHIỆP</h2>
-<ul>
-<li>Nghề CNTT</li>
-<li>Tìm hiểu tuyển sinh</li>
-</ul>
-
-</div>
-
-<!-- THỜI KHÓA BIỂU -->
-<div id="thoikhoabieu" class="section">
-
-<h2 style="text-align:center;">THỜI KHÓA BIỂU</h2>
-
-<table>
-
-<tr>
-<th>Tiết</th>
-<th>Thứ 2</th>
-<th>Thứ 3</th>
-<th>Thứ 4</th>
-<th>Thứ 5</th>
-<th>Thứ 6</th>
-</tr>
-
-<tr class="session">
-<td colspan="6">BUỔI SÁNG</td>
-</tr>
-
-<tr>
-<td>Tiết 1</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Hóa</td>
-</tr>
-
-<tr>
-<td>Tiết 2</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Sinh</td>
-</tr>
-
-<tr>
-<td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td>
-</tr>
-
-<tr>
-<td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td>
-</tr>
-
-<tr class="session">
-<td colspan="6">BUỔI CHIỀU</td>
-</tr>
-
-<tr>
-<td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td>
-</tr>
-
-<tr>
-<td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td>
-</tr>
-
-<tr>
-<td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td>
-</tr>
-
-</table>
-
-</div>
-
-<!-- STYLE -->
-<div id="style" class="section">
+<!-- GIỚI THIỆU (CODE CŨ CỦA BẠN) -->
+<div id="gioithieu" class="section active">
 
 <div class="container">
 
 <div class="card">
-<div class="flower">🌸🌼🌷</div>
-
-<h2>BabyChip</h2>
+<h2>🌸 BabyChip</h2>
 
 <p>
-Xin chào mọi người, mình tên là <b>BabyChip</b>. Mình là một người vui vẻ, thích học hỏi những điều mới và luôn cố gắng trong quá trình học tập.
+Xin chào mọi người, mình tên là <b>BabyChip</b>. 
+Mình là một người vui vẻ, thích học hỏi những điều mới và luôn cố gắng trong học tập.
 </p>
 
-<div class="career">
 <h3>🌺 Nghề nghiệp mơ ước: Lập trình viên</h3>
 <p>
-Mình chọn nghề lập trình viên vì mình rất thích máy tính và công nghệ. Mỗi khi viết được một đoạn chương trình, mình cảm thấy rất vui và tự hào. Nghề này giúp mình sáng tạo và làm việc trong môi trường hiện đại.
+Mình thích máy tính và công nghệ. Khi viết được chương trình, mình cảm thấy rất vui và tự hào.
 </p>
-</div>
-
 </div>
 
 <div class="card">
-<div class="flower">🌷🌻🌸</div>
-
-<h2>Toni</h2>
+<h2>🌼 Toni</h2>
 
 <p>
-Xin chào, mình tên là <b>Toni</b>. Mình là một người hiền hòa, yêu thích giúp đỡ người khác và luôn quan tâm đến mọi người xung quanh.
+Xin chào, mình tên là <b>Toni</b>. 
+Mình là người hiền hoà và thích giúp đỡ người khác.
 </p>
 
-<div class="career">
-<h3>🌼 Nghề nghiệp mơ ước: Bác sĩ</h3>
+<h3>🌸 Nghề nghiệp mơ ước: Bác sĩ</h3>
 <p>
-Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi người khỏe mạnh.
+Mình muốn chữa bệnh và giúp mọi người khỏe mạnh.
 </p>
 </div>
 
@@ -314,43 +147,59 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
 
 </div>
 
-</div>
-
-<!-- GÓP Ý -->
+<!-- GÓP Ý (NV1 + NV2 + NV3) -->
 <div id="gopy" class="section">
 
-<h3>Đóng góp ý kiến cho thư viện của nhà trường</h3>
+<div id="message" class="success">
+<b>Cảm ơn bạn đã góp ý kiến!</b><br>
+Chúng tôi sẽ ghi nhận và cải thiện trong thời gian tới.
+</div>
 
-<form action="#">
-    <fieldset>
-        <legend>1. Thông tin về người góp ý</legend>
-        
-        <label>Họ và tên:</label>
-        <input type="text" name="txtTen">
+<h3>Đóng góp ý kiến cho thư viện nhà trường</h3>
 
-        <label>Địa chỉ email:</label>
-        <input type="text" name="txtEmail">
-    </fieldset>
+<form onsubmit="submitForm(event)">
 
-    <fieldset>
-        <legend>2. Đóng góp ý kiến</legend>
-        
-        <label>Ý kiến đóng góp:</label><br>
-        <textarea name="txtComment" rows="6" cols="40"></textarea>
-    </fieldset>
+<fieldset>
+<legend>1. Thông tin về người góp ý</legend>
 
-    <br>
-    <input type="submit" value="Gửi ý kiến">
-    <input type="reset" value="Nhập lại">
+<label>Họ và tên:</label><br>
+<input type="text" name="txtTen"><br><br>
+
+<label>Địa chỉ email:</label><br>
+<input type="text" name="txtEmail">
+</fieldset>
+
+<fieldset>
+<legend>2. Đóng góp ý kiến</legend>
+
+<label>Ý kiến đóng góp:</label><br>
+<textarea name="txtComment" rows="6" cols="40"></textarea>
+
+<br><br>
+
+<b>Thể loại cần bổ sung thêm sách:</b><br>
+<input type="checkbox" name="chkTruyenNgan"> Truyện ngắn<br>
+<input type="checkbox" name="chkKiNang"> Kĩ năng sống<br>
+<input type="checkbox" name="chkCNTT"> Công nghệ thông tin<br>
+<input type="checkbox" name="chkTruyenTranh"> Truyện tranh<br>
+<input type="checkbox" name="chkLichSu"> Lịch sử
+
+</fieldset>
+
+<br>
+
+<input type="submit" value="Góp ý">
+<input type="reset" value="Nhập lại">
+
 </form>
 
 </div>
 
 </div>
 
-<footer>
+<footer style="text-align:center; padding:10px;">
 © 2026 Trường THPT Ngô Quyền Tp.HCM
 </footer>
 
 </body>
-</html>
+    </html>
