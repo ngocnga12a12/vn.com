@@ -1,239 +1,188 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<title>Trang web Tin 12</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-}
-
-header {
-    background: #0b5fa5;
-    text-align: center;
-    color: white;
-    padding: 15px;
-}
-
-nav {
-    background: #1c3f5e;
-    padding: 10px;
-    text-align: center;
-}
-
-nav button {
-    background: none;
-    border: none;
-    color: white;
-    font-weight: bold;
-    margin: 15px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-nav button:hover {
-    color: yellow;
-}
-
-.content {
-    padding: 30px;
-}
-
-.section {
-    display: none;
-}
-
-.active {
-    display: block;
-}
-
-table {
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-}
-
-.session {
-    background: #e0e0e0;
-    font-weight: bold;
-}
-
-.container {
-    width: 900px;
-    margin: auto;
-    display: flex;
-    gap: 30px;
-}
-
-.card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    width: 45%;
-}
-
-.success {
-    background: #d4edda;
-    padding: 10px;
-    margin-bottom: 15px;
-    display: none;
-}
-</style>
-
-<script>
-function showSection(id) {
-    let sections = document.querySelectorAll('.section');
-    sections.forEach(sec => sec.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-}
-
-function submitForm(event) {
-    event.preventDefault();
-    document.getElementById("message").style.display = "block";
-}
-</script>
-
-</head>
-
-<body>
-
-<header>
-<h1>Trang web Tin 12</h1>
-</header>
-
-<nav>
-<button onclick="showSection('tkb')">Thời khóa biểu</button>
-<button onclick="showSection('gioithieu')">Giới thiệu</button>
-<button onclick="showSection('gopy')">Góp ý</button>
-</nav>
-
-<div class="content">
-
-<!-- ================= CODE GỐC CỦA BẠN (GIỮ NGUYÊN 100%) ================= -->
-<!--
-(TOÀN BỘ ĐOẠN CODE BẠN GỬI - KHÔNG SỬA 1 CHỮ NÀO)
-
 <!DOCTYPE html >
 < html  lang =" vi " >
 < đầu >
 < meta  charset =" UTF-8 " >
 < title > Trang web Tin 12 </ title >
-...
-(giữ nguyên toàn bộ đoạn bạn gửi)
--->
-<!-- ================================================================ -->
 
-<!-- THỜI KHÓA BIỂU -->
-<div id="tkb" class="section active">
-<table>
-<tr>
-<th>Tiết</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th>
-</tr>
+<style>​​
+thân hình {
+    lề :  0 ;
+    font-family : Arial;
+}
 
-<tr class="session">
-<td colspan="6">BUỔI SÁNG</td>
-</tr>
+/* TIÊU ĐỀ */
+tiêu đề {
+    nền :  # 0b5fa5 ;
+    căn chỉnh văn bản : ở giữa;
+}
 
-<tr>
-<td>Tiết 1</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Hóa</td>
-</tr>
+/* MENU */
+điều hướng {
+    hình nền :  # 1c3f5e ;
+    khoảng đệm :  10px ;
+    căn chỉnh văn bản : ở giữa;
+}
 
-<tr>
-<td>Tiết 2</td><td>Văn</td><td>Toán</td><td>Sinh</td><td>Hóa</td><td>Lý</td>
-</tr>
+ nút điều hướng {
+    Không có hình nền ;
+    viền : không có;
+    Màu sắc : trắng;
+    font-weight : bold;
+    lề :  15px ;​
+    con trỏ : con trỏ chuột;
+    cỡ chữ :  16px ;
+}
 
-<tr>
-<td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td>
-</tr>
+ nút điều hướng : di chuột {
+    Màu sắc : vàng;
+}
 
-<tr>
-<td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td>
-</tr>
+/* NỘI DUNG */
+. nội dung {
+    khoảng đệm :  30px ;
+    min -height :  400px ;
+}
 
-<tr class="session">
-<td colspan="6">BUỔI CHIỀU</td>
-</tr>
+. phần {
+    hiển thị : không có;
+}
 
-<tr>
-<td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td>
-</tr>
+/* BÀN */
+bàn {
+    sụp đổ biên giới : sụp đổ;
+    chiều rộng :  80 % ;
+    lề : tự động;
+}
 
-<tr>
-<td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td>
-</tr>
+th ,  td {
+    viền :  1 px màu đen đặc;
+    khoảng đệm :  8px ;
+    căn chỉnh văn bản : ở giữa;
+}
 
-<tr>
-<td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td>
-</tr>
-</table>
-</div>
+. phiên họp {
+    nền :  # e0e0e0 ;
+    font-weight : bold;
+}
 
-<!-- GIỚI THIỆU -->
-<div id="gioithieu" class="section">
-<div class="container">
+/* THẺ */
+. container {
+    chiều rộng :  900 px ;
+    lề : tự động;
+    hiển thị : flex;
+    khoảng cách :  30px ;
+}
 
-<div class="card">
-<div>🌸🌼🌷</div>
-<h2>BabyChip</h2>
-<p>Xin chào mọi người, mình tên là <b>BabyChip</b>.</p>
-<h3>🌺 Nghề: Lập trình viên</h3>
-</div>
+</ tr >
 
-<div class="card">
-<div>🌷🌻🌸</div>
-<h2>Toni</h2>
-<p>Xin chào, mình tên là <b>Toni</b>.</p>
-<h3>🌼 Nghề: Bác sĩ</h3>
-</div>
+< tr >
+< td > Tiết 3 </ td > < td > Lý </ td > < td > Hóa </ td > < td > Toán </ td > < td > Văn </ td > < td > Anh </ td >
+</ tr >
 
-</div>
-</div>
+< tr >
+< td > Tiết 4 </ td > < td > Anh </ td > < td > Sinh </ td > < td > Lý </ td > < td > Toán </ td > < td > Văn </ td >
+</ tr >
 
-<!-- GÓP Ý (NV2 + NV3) -->
-<div id="gopy" class="section">
+< tr  class =" session " >
+< td  colspan =" 6 " > BUỔI CHIỀU </ td >
+</ tr >
 
-<div id="message" class="success">
-<b>Cảm ơn bạn đã góp ý kiến!</b>
-</div>
+< tr >
+< td > Tiết kiệm 1 </ td > < td > Thể dục </ td > < td > Tin </ td > < td > Công nghệ </ td > < td > Tin </ td > < td > Thể dục </ td >
+</ tr >
 
-<form onsubmit="submitForm(event)">
-<fieldset>
-<legend>Thông tin</legend>
-<input type="text" placeholder="Họ tên"><br><br>
-<input type="text" placeholder="Email">
-</fieldset>
+< tr >
+< td > Tiết 2 </ td > < td > Tin </ td > < td > Thể giáo dục </ td > < td > GDCD </ td > < td > Công nghệ </ td > < td > Tin </ td >
+</ tr >
 
-<fieldset>
-<legend>Ý kiến</legend>
-<textarea rows="5" cols="40"></textarea>
+< tr >
+< td > Tiết 3 </ td > < td > GDCD </ td > < td > Tin </ td > < td > Thể giáo dục </ td > < td > GDCD </ td > < td > Công nghệ </ td >
+</ tr >
 
-<br><br>
+</ bảng >
 
-<input type="checkbox"> Truyện ngắn<br>
-<input type="checkbox"> Kĩ năng sống<br>
-<input type="checkbox"> CNTT<br>
-<input type="checkbox"> Truyện tranh<br>
-<input type="checkbox"> Lịch sử
-</fieldset>
+</ div >
 
-<br>
-<input type="submit" value="Góp ý">
-</form>
+<!-- STYLE -->
+< div  id ="" style " class ="" section " >
 
-</div>
+< div  class =" container " >
 
-</div>
+< div  class =" card " >
+< div  class = " flower " > </div> 🌸🌼🌷 </div>
 
-<footer style="text-align:center;">
+< h2 > BabyChip </ h2 >
+
+<p>​​
+Xin chào mọi người, mình tên là < b > BabyChip </ b > . Mình là một người vui vẻ, thích học hỏi những điều mới và luôn cố gắng trong suốt quá trình học tập.
+</p>​​
+
+< div  class =" career " >
+< h3 > 🌺 Nghề nghiệp mơ ước: Lập trình viên </ h3 >
+<p>​​
+Mình chọn lập trình viên nghề nghiệp vì mình rất thích máy tính và công nghệ. Mỗi khi viết được một đoạn chương trình, mình cảm thấy rất vui và tự hào. Nghề này giúp mình sáng tạo và làm việc trong môi trường hiện đại.
+</p>​​
+</ div >
+
+</ div >
+
+< div  class =" card " >
+< div  class = " flower " > </div> 🌷🌻🌸 </div>
+
+<h2> Toni </h2>​​​​
+
+<p>​​
+Xin chào, mình tên là < b > Toni </ b > . Mình là một người hiền hoà, yêu thích giúp đỡ người khác và luôn quan tâm đến mọi người xung quanh.
+</p>​​
+
+< div  class =" career " >
+< h3 > 🌼 Nghề nghiệp mơ ước: Bác sĩ </ h3 >
+<p>​​
+Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp đỡ mọi người khỏe mạnh.
+</p>​​
+</ div >
+
+</ div >
+
+</ div >
+
+</ div >
+
+<!-- GÓP Ý -->
+< div  id =" gopy " class =" phần " >
+
+< h3 > Đóng góp ý kiến ​​cho thư viện nhà trường </ h3 >
+
+< form  action =" # " >
+    <fieldset>​​
+        < legend > 1. Thông tin về người góp ý </ legend >
+        
+        < label > Họ và tên: </ label >
+        < input  type =" text " name =" txtTen " >
+
+        < nhãn > Địa chỉ email: </ nhãn >
+        < input  type =" text " name =" txtEmail " >
+    </fieldset>​​
+
+    <fieldset>​​
+        < legend > 2. Đóng góp ý kiến ​​</ legend >
+        
+        < nhãn > Ý kiến ​​đóng góp: </ nhãn > < br >
+        < textarea  name =" txtComment " rows = " 6 " cols = " 40 " > </textarea>
+    </fieldset>​​
+
+    <br>​​
+    < loại đầu vào  =" gửi " giá trị =" Gửi ý kiến ​​" >
+    < input  type =" reset " value =" Nhập lại " >
+</form>​​
+
+</ div >
+
+</ div >
+
+< chân trang >
 © 2026 Trường THPT Ngô Quyền Tp.HCM
-</footer>
+</footer>​​
 
-</body>
-                                </html>
+</body>​​
+</ html >
