@@ -134,10 +134,16 @@ function hien(id) {
     document.getElementById(id).style.display = "block";
 }
 
-/* ✅ NV3 */
+/* ✅ Góp Ý */
 function guiYKien(event) {
     event.preventDefault();
     document.getElementById("thongbao").style.display = "block";
+}
+
+/* ✅ Hội Thao */
+function guiHoithao(event) {
+    event.preventDefault();
+    document.getElementById("thongbaoHoithao").style.display = "block";
 }
 </script>
 
@@ -155,6 +161,7 @@ function guiYKien(event) {
 <button onclick="hien('thoikhoabieu')">Thời khóa biểu</button>
 <button onclick="hien('style')">Style</button>
 <button onclick="hien('gopy')">Góp ý</button>
+<button onclick="hien('hoithao')">Hội Thao</button>
 </nav>
 
 <div class="content">
@@ -188,45 +195,46 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 <div id="tinhoc" class="section">
 <h1 style="text-align:center;color:#003366;">CHƯƠNG TRÌNH TIN HỌC 12</h1>
 <h2 style="color:red;">A. GIỚI THIỆU TRÍ TUỆ NHÂN TẠO...</h2>
-<ul><li>Giới thiệu về trí tuệ nhân tạo</li></ul>
-     <li>Sử dụng AI trong học tập và đời sống</li>
-        <li>Giới thiệu về Học máy và Khoa học dữ liệu</li>
-        <li>Thực hành phân tích dữ liệu</li>
-    </ul>
+<ul>
+    <li>Giới thiệu về trí tuệ nhân tạo</li>
+    <li>Sử dụng AI trong học tập và đời sống</li>
+    <li>Giới thiệu về Học máy và Khoa học dữ liệu</li>
+    <li>Thực hành phân tích dữ liệu</li>
+</ul>
 
-    <h2>B. MẠNG MÁY TÍNH VÀ INTERNET</h2>
-    <ul>
-        <li>Cơ sở về mạng máy tính</li>
-        <li>Các giao thức mạng</li>
-        <li>Thực hành thiết lập kết nối và sử dụng mạng</li>
-        <li>Đường truyền hữu tuyến và vô tuyến</li>
-        <li>Thiết bị mạng</li>
-        <li>Thiết kế mạng LAN</li>
-    </ul>
+<h2>B. MẠNG MÁY TÍNH VÀ INTERNET</h2>
+<ul>
+    <li>Cơ sở về mạng máy tính</li>
+    <li>Các giao thức mạng</li>
+    <li>Thực hành thiết lập kết nối và sử dụng mạng</li>
+    <li>Đường truyền hữu tuyến và vô tuyến</li>
+    <li>Thiết bị mạng</li>
+    <li>Thiết kế mạng LAN</li>
+</ul>
 
-    <h2>D. ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA TRONG MÔI TRƯỜNG SỐ</h2>
-    <ul>
-        <li>Giao tiếp và tính nhân văn trong ứng xử trên không gian mạng</li>
-    </ul>
+<h2>D. ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA TRONG MÔI TRƯỜNG SỐ</h2>
+<ul>
+    <li>Giao tiếp và tính nhân văn trong ứng xử trên không gian mạng</li>
+</ul>
 
-    <h2>F. TẠO TRANG WEB</h2>
-    <ul>
-        <li>Làm quen với ngôn ngữ đánh dấu siêu văn bản</li>
-        <li>Định dạng văn bản và tạo siêu liên kết</li>
-        <li>Trình bày nội dung theo dạng danh sách, bảng biểu</li>
-        <li>Chèn hình ảnh, âm thanh, video và sử dụng khung</li>
-        <li>Tạo biểu mẫu</li>
-        <li>Định dạng với CSS</li>
-        <li>Bộ chọn lớp, bộ chọn định danh</li>
-        <li>Mô hình hộp, bố cục trang web</li>
-        <li>Dự án nhỏ: Tạo trang web</li>
-    </ul>
+<h2>F. TẠO TRANG WEB</h2>
+<ul>
+    <li>Làm quen với ngôn ngữ đánh dấu siêu văn bản</li>
+    <li>Định dạng văn bản và tạo siêu liên kết</li>
+    <li>Trình bày nội dung theo dạng danh sách, bảng biểu</li>
+    <li>Chèn hình ảnh, âm thanh, video và sử dụng khung</li>
+    <li>Tạo biểu mẫu</li>
+    <li>Định dạng với CSS</li>
+    <li>Bộ chọn lớp, bộ chọn định danh</li>
+    <li>Mô hình hộp, bố cục trang web</li>
+    <li>Dự án nhỏ: Tạo trang web</li>
+</ul>
 
-    <h2>G. HƯỚNG NGHIỆP VỚI TIN HỌC</h2>
-    <ul>
-        <li>Một số nghề ứng dụng CNTT và ngành thuộc lĩnh vực tin học</li>
-        <li>Dự án: Tìm hiểu thông tin tuyển sinh và hướng nghiệp</li>
-    </ul>
+<h2>G. HƯỚNG NGHIỆP VỚI TIN HỌC</h2>
+<ul>
+    <li>Một số nghề ứng dụng CNTT và ngành thuộc lĩnh vực tin học</li>
+    <li>Dự án: Tìm hiểu thông tin tuyển sinh và hướng nghiệp</li>
+</ul>
 
 </div>
 
@@ -237,28 +245,13 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 <tr><th>Tiết</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th></tr>
 <tr class="session"><td colspan="6">BUỔI SÁNG</td></tr>
 <tr><td>Tiết 1</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Hóa</td></tr>
-     <tr>
-        <td>Tiết 2</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Sinh</td>
-    </tr>
-    <tr>
-        <td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td>
-    </tr>
-    <tr>
-        <td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td>
-    </tr>
-
-    <tr class="session">
-        <td colspan="6">BUỔI CHIỀU</td>
-    </tr>
-    <tr>
-        <td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td>
-    </tr>
-    <tr>
-        <td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td>
-    </tr>
-    <tr>
-        <td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td>
-    </tr>
+<tr><td>Tiết 2</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Sinh</td></tr>
+<tr><td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td></tr>
+<tr><td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td></tr>
+<tr class="session"><td colspan="6">BUỔI CHIỀU</td></tr>
+<tr><td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td></tr>
+<tr><td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td></tr>
+<tr><td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td></tr>
 </table>
 </div>
 
@@ -337,7 +330,6 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
 
 <br><br>
 
-<!-- NV2 -->
 <input type="checkbox"> Truyện ngắn<br>
 <input type="checkbox"> Kĩ năng sống<br>
 <input type="checkbox"> CNTT<br>
@@ -350,44 +342,49 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
 </form>
 
 </div>
-    <!-- HỘI THAO -->
+
+<!-- HỘI THAO -->
 <div id="hoithao" class="section">
 
 <h3>Đăng kí tham gia Hội thao</h3>
 
-<form>
-    <fieldset>
-        <legend>1. Thông tin cá nhân</legend>
+<div id="thongbaoHoithao" class="success">
+<b>Đăng kí thành công!</b>
+</div>
 
-        <label for="hoten">Họ và tên:</label>
-        <input type="text" id="hoten" name="hoten">
+<form onsubmit="guiHoithao(event)">
+<fieldset>
+<legend>1. Thông tin cá nhân</legend>
 
-        <label for="email">Địa chỉ email:</label>
-        <input type="email" id="email" name="email">
+<label for="hoten">Họ và tên:</label>
+<input type="text" id="hoten" name="hoten">
 
-        <label>Lớp:</label><br>
-        <input type="radio" id="lop10" name="lop" value="10">
-        <label for="lop10">Lớp 10</label>
-        <input type="radio" id="lop11" name="lop" value="11">
-        <label for="lop11">Lớp 11</label>
-        <input type="radio" id="lop12" name="lop" value="12">
-        <label for="lop12">Lớp 12</label>
-    </fieldset>
+<label for="email">Địa chỉ email:</label>
+<input type="email" id="email" name="email">
 
-    <fieldset>
-        <legend>2. Tham dự môn</legend>
+<label>Lớp:</label><br>
+<input type="radio" id="lop10" name="lop" value="10">
+<label for="lop10">Lớp 10</label>
+<input type="radio" id="lop11" name="lop" value="11">
+<label for="lop11">Lớp 11</label>
+<input type="radio" id="lop12" name="lop" value="12">
+<label for="lop12">Lớp 12</label>
+</fieldset>
 
-        <input type="checkbox" id="bongban" name="mon" value="bongban">
-        <label for="bongban">Bóng bàn</label><br>
-        <input type="checkbox" id="caulong" name="mon" value="caulong">
-        <label for="caulong">Cầu lông</label><br>
-        <input type="checkbox" id="covua" name="mon" value="covua">
-        <label for="covua">Cờ vua</label>
-    </fieldset>
+<fieldset>
+<legend>2. Tham dự môn</legend>
 
-    <br>
-    <input type="submit" value="Đăng kí">
-    <input type="reset" value="Huỷ bỏ">
+<input type="checkbox" id="bongban" name="mon" value="bongban">
+<label for="bongban">Bóng bàn</label><br>
+<input type="checkbox" id="caulong" name="mon" value="caulong">
+<label for="caulong">Cầu lông</label><br>
+<input type="checkbox" id="covua" name="mon" value="covua">
+<label for="covua">Cờ vua</label>
+</fieldset>
+
+<br>
+<input type="submit" value="Đăng kí">
+<input type="reset" value="Huỷ bỏ">
 </form>
 
 </div>
@@ -399,4 +396,4 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
 </footer>
 
 </body>
-    </html>
+</html>
