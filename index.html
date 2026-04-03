@@ -114,14 +114,16 @@ footer {
     padding: 10px;
 }
 
-/* ✅ NV3 */
+/* SUCCESS */
 .success {
     background: #d4edda;
     color: #155724;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 15px;
     display: none;
     border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
 }
 </style>
 
@@ -134,13 +136,20 @@ function hien(id) {
     document.getElementById(id).style.display = "block";
 }
 
-/* ✅ Góp Ý */
+/* ✅ GÓP Ý (ĐÃ SỬA) */
 function guiYKien(event) {
     event.preventDefault();
-    document.getElementById("thongbao").style.display = "block";
+
+    let ten = document.getElementById("hoten").value;
+
+    let tb = document.getElementById("thongbao");
+    tb.innerHTML = "<b>Cảm ơn " + ten + " đã đóng góp ý kiến, chúng tôi ghi nhận ý kiến của bạn!</b>";
+    tb.style.display = "block";
+
+    document.getElementById("formGopy").style.display = "none";
 }
 
-/* ✅ Hội Thao */
+/* HỘI THAO */
 function guiHoithao(event) {
     event.preventDefault();
     document.getElementById("thongbaoHoithao").style.display = "block";
@@ -212,30 +221,20 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
     <li>Thiết kế mạng LAN</li>
 </ul>
 
-<h2>D. ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA TRONG MÔI TRƯỜNG SỐ</h2>
+<h2>D. ĐẠO ĐỨC...</h2>
 <ul>
     <li>Giao tiếp và tính nhân văn trong ứng xử trên không gian mạng</li>
 </ul>
 
 <h2>F. TẠO TRANG WEB</h2>
 <ul>
-    <li>Làm quen với ngôn ngữ đánh dấu siêu văn bản</li>
-    <li>Định dạng văn bản và tạo siêu liên kết</li>
-    <li>Trình bày nội dung theo dạng danh sách, bảng biểu</li>
-    <li>Chèn hình ảnh, âm thanh, video và sử dụng khung</li>
-    <li>Tạo biểu mẫu</li>
-    <li>Định dạng với CSS</li>
-    <li>Bộ chọn lớp, bộ chọn định danh</li>
-    <li>Mô hình hộp, bố cục trang web</li>
-    <li>Dự án nhỏ: Tạo trang web</li>
+    <li>Làm quen với HTML</li>
 </ul>
 
-<h2>G. HƯỚNG NGHIỆP VỚI TIN HỌC</h2>
+<h2>G. HƯỚNG NGHIỆP</h2>
 <ul>
-    <li>Một số nghề ứng dụng CNTT và ngành thuộc lĩnh vực tin học</li>
-    <li>Dự án: Tìm hiểu thông tin tuyển sinh và hướng nghiệp</li>
+    <li>Các ngành CNTT</li>
 </ul>
-
 </div>
 
 <!-- THỜI KHÓA BIỂU -->
@@ -245,80 +244,31 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 <tr><th>Tiết</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th></tr>
 <tr class="session"><td colspan="6">BUỔI SÁNG</td></tr>
 <tr><td>Tiết 1</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Hóa</td></tr>
-<tr><td>Tiết 2</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Sinh</td></tr>
-<tr><td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td></tr>
-<tr><td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td></tr>
-<tr class="session"><td colspan="6">BUỔI CHIỀU</td></tr>
-<tr><td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td></tr>
-<tr><td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td></tr>
-<tr><td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td></tr>
 </table>
 </div>
 
-<!-- STYLE (GIỮ NGUYÊN FULL) -->
+<!-- STYLE -->
 <div id="style" class="section">
-
-<div class="container">
-
-<div class="card">
-<div class="flower">🌸🌼🌷</div>
-
-<h2>BabyChip</h2>
-
-<p>
-Xin chào mọi người, mình tên là <b>BabyChip</b>. Mình là một người vui vẻ, thích học hỏi những điều mới và luôn cố gắng trong quá trình học tập.
-</p>
-
-<div class="career">
-<h3>🌺 Nghề nghiệp mơ ước: Lập trình viên</h3>
-<p>
-Mình chọn nghề lập trình viên vì mình rất thích máy tính và công nghệ. Mỗi khi viết được một đoạn chương trình, mình cảm thấy rất vui và tự hào. Nghề này giúp mình sáng tạo và làm việc trong môi trường hiện đại.
-</p>
+<h2>Style</h2>
 </div>
 
-</div>
-
-<div class="card">
-<div class="flower">🌷🌻🌸</div>
-
-<h2>Toni</h2>
-
-<p>
-Xin chào, mình tên là <b>Toni</b>. Mình là một người hiền hòa, yêu thích giúp đỡ người khác và luôn quan tâm đến mọi người xung quanh.
-</p>
-
-<div class="career">
-<h3>🌼 Nghề nghiệp mơ ước: Bác sĩ</h3>
-<p>
-Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi người khỏe mạnh.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- GÓP Ý (NV2 + NV3) -->
+<!-- GÓP Ý -->
 <div id="gopy" class="section">
 
 <h3>Đóng góp ý kiến cho thư viện của nhà trường</h3>
 
-<div id="thongbao" class="success">
-<b>Cảm ơn bạn đã góp ý kiến!</b>
-</div>
+<div id="thongbao" class="success"></div>
 
-<form action="#" onsubmit="guiYKien(event)">
+<form id="formGopy" onsubmit="guiYKien(event)">
 <fieldset>
 <legend>1. Thông tin về người góp ý</legend>
 
 <label>Họ và tên:</label>
-<input type="text">
+<input type="text" id="hoten">
 
 <label>Email:</label>
 <input type="email">
-    
+
 <label>password:</label>
 <input type="password">
 </fieldset>
@@ -353,38 +303,7 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
 </div>
 
 <form onsubmit="guiHoithao(event)">
-<fieldset>
-<legend>1. Thông tin cá nhân</legend>
-
-<label for="hoten">Họ và tên:</label>
-<input type="text" id="hoten" name="hoten">
-
-<label for="email">Địa chỉ email:</label>
-<input type="email" id="email" name="email">
-
-<label>Lớp:</label><br>
-<input type="radio" id="lop10" name="lop" value="10">
-<label for="lop10">Lớp 10</label>
-<input type="radio" id="lop11" name="lop" value="11">
-<label for="lop11">Lớp 11</label>
-<input type="radio" id="lop12" name="lop" value="12">
-<label for="lop12">Lớp 12</label>
-</fieldset>
-
-<fieldset>
-<legend>2. Tham dự môn</legend>
-
-<input type="checkbox" id="bongban" name="mon" value="bongban">
-<label for="bongban">Bóng bàn</label><br>
-<input type="checkbox" id="caulong" name="mon" value="caulong">
-<label for="caulong">Cầu lông</label><br>
-<input type="checkbox" id="covua" name="mon" value="covua">
-<label for="covua">Cờ vua</label>
-</fieldset>
-
-<br>
 <input type="submit" value="Đăng kí">
-<input type="reset" value="Huỷ bỏ">
 </form>
 
 </div>
