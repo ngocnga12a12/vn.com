@@ -114,16 +114,14 @@ footer {
     padding: 10px;
 }
 
-/* SUCCESS */
+/* ✅ NV3 */
 .success {
     background: #d4edda;
     color: #155724;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 15px;
     display: none;
     border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
 }
 </style>
 
@@ -136,7 +134,7 @@ function hien(id) {
     document.getElementById(id).style.display = "block";
 }
 
-/* ✅ GÓP Ý (ĐÃ SỬA) */
+/* ✅ Góp Ý (ĐÃ SỬA) */
 function guiYKien(event) {
     event.preventDefault();
 
@@ -149,7 +147,7 @@ function guiYKien(event) {
     document.getElementById("formGopy").style.display = "none";
 }
 
-/* HỘI THAO */
+/* ✅ Hội Thao */
 function guiHoithao(event) {
     event.preventDefault();
     document.getElementById("thongbaoHoithao").style.display = "block";
@@ -221,20 +219,30 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
     <li>Thiết kế mạng LAN</li>
 </ul>
 
-<h2>D. ĐẠO ĐỨC...</h2>
+<h2>D. ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA TRONG MÔI TRƯỜNG SỐ</h2>
 <ul>
     <li>Giao tiếp và tính nhân văn trong ứng xử trên không gian mạng</li>
 </ul>
 
 <h2>F. TẠO TRANG WEB</h2>
 <ul>
-    <li>Làm quen với HTML</li>
+    <li>Làm quen với ngôn ngữ đánh dấu siêu văn bản</li>
+    <li>Định dạng văn bản và tạo siêu liên kết</li>
+    <li>Trình bày nội dung theo dạng danh sách, bảng biểu</li>
+    <li>Chèn hình ảnh, âm thanh, video và sử dụng khung</li>
+    <li>Tạo biểu mẫu</li>
+    <li>Định dạng với CSS</li>
+    <li>Bộ chọn lớp, bộ chọn định danh</li>
+    <li>Mô hình hộp, bố cục trang web</li>
+    <li>Dự án nhỏ: Tạo trang web</li>
 </ul>
 
-<h2>G. HƯỚNG NGHIỆP</h2>
+<h2>G. HƯỚNG NGHIỆP VỚI TIN HỌC</h2>
 <ul>
-    <li>Các ngành CNTT</li>
+    <li>Một số nghề ứng dụng CNTT và ngành thuộc lĩnh vực tin học</li>
+    <li>Dự án: Tìm hiểu thông tin tuyển sinh và hướng nghiệp</li>
 </ul>
+
 </div>
 
 <!-- THỜI KHÓA BIỂU -->
@@ -244,12 +252,59 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 <tr><th>Tiết</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th></tr>
 <tr class="session"><td colspan="6">BUỔI SÁNG</td></tr>
 <tr><td>Tiết 1</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Hóa</td></tr>
+<tr><td>Tiết 2</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Lý</td><td>Sinh</td></tr>
+<tr><td>Tiết 3</td><td>Lý</td><td>Hóa</td><td>Toán</td><td>Văn</td><td>Anh</td></tr>
+<tr><td>Tiết 4</td><td>Anh</td><td>Sinh</td><td>Lý</td><td>Toán</td><td>Văn</td></tr>
+<tr class="session"><td colspan="6">BUỔI CHIỀU</td></tr>
+<tr><td>Tiết 1</td><td>Thể dục</td><td>Tin</td><td>Công nghệ</td><td>Tin</td><td>Thể dục</td></tr>
+<tr><td>Tiết 2</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td><td>Tin</td></tr>
+<tr><td>Tiết 3</td><td>GDCD</td><td>Tin</td><td>Thể dục</td><td>GDCD</td><td>Công nghệ</td></tr>
 </table>
 </div>
 
 <!-- STYLE -->
 <div id="style" class="section">
-<h2>Style</h2>
+
+<div class="container">
+
+<div class="card">
+<div class="flower">🌸🌼🌷</div>
+
+<h2>BabyChip</h2>
+
+<p>
+Xin chào mọi người, mình tên là <b>BabyChip</b>. Mình là một người vui vẻ, thích học hỏi những điều mới và luôn cố gắng trong quá trình học tập.
+</p>
+
+<div class="career">
+<h3>🌺 Nghề nghiệp mơ ước: Lập trình viên</h3>
+<p>
+Mình chọn nghề lập trình viên vì mình rất thích máy tính và công nghệ.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<div class="flower">🌷🌻🌸</div>
+
+<h2>Toni</h2>
+
+<p>
+Xin chào, mình tên là <b>Toni</b>.
+</p>
+
+<div class="career">
+<h3>🌼 Nghề nghiệp mơ ước: Bác sĩ</h3>
+<p>
+Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi người khỏe mạnh.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 <!-- GÓP Ý -->
@@ -259,7 +314,7 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 
 <div id="thongbao" class="success"></div>
 
-<form id="formGopy" onsubmit="guiYKien(event)">
+<form id="formGopy" action="#" onsubmit="guiYKien(event)">
 <fieldset>
 <legend>1. Thông tin về người góp ý</legend>
 
@@ -268,7 +323,7 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 
 <label>Email:</label>
 <input type="email">
-
+    
 <label>password:</label>
 <input type="password">
 </fieldset>
@@ -304,6 +359,7 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 
 <form onsubmit="guiHoithao(event)">
 <input type="submit" value="Đăng kí">
+<input type="reset" value="Huỷ bỏ">
 </form>
 
 </div>
@@ -315,4 +371,4 @@ Sở thích của tôi là ăn thật nhiều đồ ăn ngon. Điều đó làm 
 </footer>
 
 </body>
-</html>
+    </html>
