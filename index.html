@@ -114,7 +114,7 @@ footer {
     padding: 10px;
 }
 
-/* ✅ NV3 */
+/* SUCCESS */
 .success {
     background: #d4edda;
     color: #155724;
@@ -134,11 +134,11 @@ function hien(id) {
     document.getElementById(id).style.display = "block";
 }
 
-/* ✅ Góp Ý (ĐÃ SỬA) */
+/* 🔥 SỬA GÓP Ý */
 function guiYKien(event) {
     event.preventDefault();
 
-    let ten = document.getElementById("hoten").value;
+    let ten = document.getElementById("hoten_gopy").value;
 
     let tb = document.getElementById("thongbao");
     tb.innerHTML = "<b>Cảm ơn " + ten + " đã đóng góp ý kiến, chúng tôi ghi nhận ý kiến của bạn!</b>";
@@ -147,10 +147,17 @@ function guiYKien(event) {
     document.getElementById("formGopy").style.display = "none";
 }
 
-/* ✅ Hội Thao */
+/* 🔥 SỬA HỘI THAO */
 function guiHoithao(event) {
     event.preventDefault();
-    document.getElementById("thongbaoHoithao").style.display = "block";
+
+    let ten = document.getElementById("hoten_ht").value;
+
+    let tb = document.getElementById("thongbaoHoithao");
+    tb.innerHTML = "<b>Cảm ơn " + ten + " đã đăng kí hội thao!</b>";
+    tb.style.display = "block";
+
+    document.getElementById("formHoithao").style.display = "none";
 }
 </script>
 
@@ -279,7 +286,7 @@ Xin chào mọi người, mình tên là <b>BabyChip</b>. Mình là một ngư�
 <div class="career">
 <h3>🌺 Nghề nghiệp mơ ước: Lập trình viên</h3>
 <p>
-Mình chọn nghề lập trình viên vì mình rất thích máy tính và công nghệ.
+Mình chọn nghề lập trình viên vì mình rất thích máy tính và công nghệ. Mỗi khi viết được một đoạn chương trình, mình cảm thấy rất vui và tự hào.
 </p>
 </div>
 
@@ -291,7 +298,7 @@ Mình chọn nghề lập trình viên vì mình rất thích máy tính và cô
 <h2>Toni</h2>
 
 <p>
-Xin chào, mình tên là <b>Toni</b>.
+Xin chào, mình tên là <b>Toni</b>. Mình là một người hiền hòa, yêu thích giúp đỡ người khác.
 </p>
 
 <div class="career">
@@ -319,7 +326,7 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
 <legend>1. Thông tin về người góp ý</legend>
 
 <label>Họ và tên:</label>
-<input type="text" id="hoten">
+<input type="text" id="hoten_gopy">
 
 <label>Email:</label>
 <input type="email">
@@ -353,11 +360,33 @@ Mình chọn nghề bác sĩ vì mình mong muốn chữa bệnh và giúp mọi
 
 <h3>Đăng kí tham gia Hội thao</h3>
 
-<div id="thongbaoHoithao" class="success">
-<b>Đăng kí thành công!</b>
-</div>
+<div id="thongbaoHoithao" class="success"></div>
 
-<form onsubmit="guiHoithao(event)">
+<form id="formHoithao" onsubmit="guiHoithao(event)">
+<fieldset>
+<legend>1. Thông tin cá nhân</legend>
+
+<label>Họ và tên:</label>
+<input type="text" id="hoten_ht">
+
+<label>Địa chỉ email:</label>
+<input type="email">
+
+<label>Lớp:</label><br>
+<input type="radio" name="lop"> Lớp 10
+<input type="radio" name="lop"> Lớp 11
+<input type="radio" name="lop"> Lớp 12
+</fieldset>
+
+<fieldset>
+<legend>2. Tham dự môn</legend>
+
+<input type="checkbox"> Bóng bàn<br>
+<input type="checkbox"> Cầu lông<br>
+<input type="checkbox"> Cờ vua
+</fieldset>
+
+<br>
 <input type="submit" value="Đăng kí">
 <input type="reset" value="Huỷ bỏ">
 </form>
